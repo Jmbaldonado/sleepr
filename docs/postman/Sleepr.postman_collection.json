@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "121d4602-3458-4ebf-a1b2-6b48229edddb",
+		"name": "Sleepr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31610427"
+	},
+	"item": [
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "Create Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": \"12/19/2023\",\r\n    \"endDate\": \"12/25/2023\",\r\n    \"placeId\": \"12345\",\r\n    \"invoiceId\": \"493\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{reservationsPort}}/reservations",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{reservationsPort}}",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{reservationsPort}}/reservations",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{reservationsPort}}",
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{reservationsPort}}/reservations/65809dab7d5259b951ca0bb0",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{reservationsPort}}",
+							"path": [
+								"reservations",
+								"65809dab7d5259b951ca0bb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}:{{reservationsPort}}/reservations/65809dab7d5259b951ca0bb0",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{reservationsPort}}",
+							"path": [
+								"reservations",
+								"65809dab7d5259b951ca0bb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reservation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": \"12/23/2023\",\r\n    \"endDate\": \"12/25/2023\",\r\n    \"placeId\": \"12345\",\r\n    \"invoiceId\": \"493\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{reservationsPort}}/reservations/65809dab7d5259b951ca0bb0",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{reservationsPort}}",
+							"path": [
+								"reservations",
+								"65809dab7d5259b951ca0bb0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"randomstrongpassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}:{{authPort}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{authPort}}",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reservations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reservations/65809dab7d5259b951ca0bb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reservations",
+								"65809dab7d5259b951ca0bb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reservation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/reservations/65809dab7d5259b951ca0bb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reservations",
+								"65809dab7d5259b951ca0bb0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reservation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": \"12/23/2023\",\r\n    \"endDate\": \"12/25/2023\",\r\n    \"placeId\": \"12345\",\r\n    \"invoiceId\": \"493\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/reservations/65809dab7d5259b951ca0bb0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"reservations",
+								"65809dab7d5259b951ca0bb0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
